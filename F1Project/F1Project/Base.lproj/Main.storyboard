@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1a-3N-9YT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="F1Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kp3-Dk-crd">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ooi-q9-dbs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="291.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the F1 season:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNM-1p-bNr">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="36"/>
+                                                <color key="textColor" red="0.39807160445850243" green="0.19252952923319377" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hU7-Mm-vg8">
+                                                <rect key="frame" x="0.0" y="47.5" width="375" height="244"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="XNM-1p-bNr" firstAttribute="centerX" secondItem="ooi-q9-dbs" secondAttribute="centerX" id="Ojg-Mj-mc8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-rJ-fXH">
+                                        <rect key="frame" x="0.0" y="291.5" width="375" height="291.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-ep-1n8" customClass="BeautifulBarChart" customModule="F1Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="291.5"/>
+                                                <subviews>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2ur-ig-D7s">
+                                                        <rect key="frame" x="177" y="136" width="20" height="20"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="2ur-ig-D7s" firstAttribute="centerX" secondItem="rTM-ep-1n8" secondAttribute="centerX" id="Kzb-cE-jvj"/>
+                                                    <constraint firstItem="2ur-ig-D7s" firstAttribute="centerY" secondItem="rTM-ep-1n8" secondAttribute="centerY" id="ZAe-Wc-Ex2"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kp3-Dk-crd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mpc-Wg-61F"/>
+                            <constraint firstAttribute="bottom" secondItem="kp3-Dk-crd" secondAttribute="bottom" id="PR9-A0-203"/>
+                            <constraint firstItem="kp3-Dk-crd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eBd-MU-hhw"/>
+                            <constraint firstItem="kp3-Dk-crd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="r8x-hO-RGG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EIR-jQ-RiJ"/>
+                    <connections>
+                        <outlet property="beautifulChart" destination="rTM-ep-1n8" id="RG4-0G-HZU"/>
+                        <outlet property="indicator" destination="2ur-ig-D7s" id="4HP-cY-IZa"/>
+                        <outlet property="pickerView" destination="hU7-Mm-vg8" id="b6l-II-EsI"/>
+                        <segue destination="17A-G3-ai9" kind="show" identifier="webviewSegue" id="aoc-0Q-HbS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="143"/>
+        </scene>
+        <!--Webview View Controller-->
+        <scene sceneID="cNf-ZG-RCJ">
+            <objects>
+                <viewController id="17A-G3-ai9" customClass="WebviewViewController" customModule="F1Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xzx-s5-K0w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHz-cl-evD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3jd-6m-GQ0">
+                                <rect key="frame" x="167" y="313.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="H3M-g9-wFs"/>
+                                    <constraint firstAttribute="height" constant="40" id="hm8-Se-smd"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sHz-cl-evD" firstAttribute="leading" secondItem="B40-6t-E8A" secondAttribute="leading" id="9cl-mS-U24"/>
+                            <constraint firstItem="3jd-6m-GQ0" firstAttribute="centerY" secondItem="xzx-s5-K0w" secondAttribute="centerY" id="WSs-q5-pTH"/>
+                            <constraint firstItem="B40-6t-E8A" firstAttribute="trailing" secondItem="sHz-cl-evD" secondAttribute="trailing" id="a11-Nd-Q6r"/>
+                            <constraint firstItem="sHz-cl-evD" firstAttribute="top" secondItem="B40-6t-E8A" secondAttribute="top" id="g3C-EA-fvI"/>
+                            <constraint firstItem="3jd-6m-GQ0" firstAttribute="centerX" secondItem="xzx-s5-K0w" secondAttribute="centerX" id="hsq-fr-xi7"/>
+                            <constraint firstItem="B40-6t-E8A" firstAttribute="bottom" secondItem="sHz-cl-evD" secondAttribute="bottom" id="uVW-gf-Goj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B40-6t-E8A"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="3jd-6m-GQ0" id="I7P-Q3-3We"/>
+                        <outlet property="webView" destination="sHz-cl-evD" id="bBQ-sK-a5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwj-Lb-LdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hNb-h1-JU7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N1a-3N-9YT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BqK-SN-8ys">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2S2-Zl-o6H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ek5-OE-clm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="144"/>
+        </scene>
+    </scenes>
+</document>
